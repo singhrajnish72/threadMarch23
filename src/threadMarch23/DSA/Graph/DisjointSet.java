@@ -22,7 +22,7 @@ public class DisjointSet {
             int v_p = findParent(v);
             if(u_p != v_p){
                 parent[Math.max(u_p,v_p)] = parent[Math.min(u_p,v_p)];
-                size[Math.min(u_p,v_p)] += 1;
+                size[Math.min(u_p,v_p)] += size[Math.max(u_p,v_p)];
             }else{
                 extraEdjes++;
             }
